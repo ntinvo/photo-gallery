@@ -2,7 +2,7 @@ import React from 'react';
 
 const Photo = (props) => {
   const photo = {
-    backgroundImage: `url(${props.property.image})`,
+    backgroundImage: `url(${props.property.image.url})`,
     key: `${props.property.key}`
   }
   return (
