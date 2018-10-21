@@ -6,7 +6,13 @@ const Photo = (props) => {
     key: `${props.property.key}`
   }
   return (
-    <div className="photo" style={photo}></div>
+    <div className="photo" style={photo}
+      onMouseDown={props.onStartHandler}
+      onTouchStart={props.onStartHandler}
+      onMouseUp={props.onEndHandler}
+      onTouchEnd={props.onEndHandler}
+    >
+    </div>
   )
 }
 

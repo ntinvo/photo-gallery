@@ -5,7 +5,7 @@ import RightArrow from './arrows/RightArrow.js';
 
 import './PhotoGallery.scss';
 
-class Lessons extends Component {
+class PhotoGallery extends Component {
 
   constructor(props) {
     super(props);
@@ -58,13 +58,12 @@ class Lessons extends Component {
       key: this.state.currentIndex
     }
     return (
-      <div className="photo-gallery"
-        onMouseDown={this.onStartHandler}
-        onTouchStart={this.onStartHandler}
-        onMouseUp={this.onEndHandler}
-        onTouchEnd={this.onEndHandler}>
+      <div className="photo-gallery">
         <div className="photo-wrapper">
-          <Photo property={property} />
+          <Photo property={property}
+            onStartHandler={this.onStartHandler}
+            onEndHandler={this.onEndHandler}
+          />
         </div>
         <LeftArrow leftPhoto={this.leftPhoto} />
         <RightArrow rightPhoto={this.rightPhoto} />
@@ -73,4 +72,4 @@ class Lessons extends Component {
   }
 }
 
-export default Lessons;
+export default PhotoGallery;
