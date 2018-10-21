@@ -44,12 +44,24 @@ class PhotoGallery extends Component {
 
   onStartHandler = (e) => {
     e.preventDefault();
-    console.log("started");
+    this.setState({
+      startSwipePositionX: e.pageX
+    })
   }
 
   onEndHandler = (e) => {
     e.preventDefault();
-    console.log("ended");
+    if(this.state.startSwipePositionX < e.pageX) {
+      let newIndex = this.state.currentIndex === 0 ? this.state.images.length - 1 : this.state.currentIndex - 1;
+      this.setState({
+        currentIndex: newIndex
+      })
+    } else {
+      let newIndex = this.state.currentIndex === this.state.images.length - 1 ? 0 : this.state.currentIndex + 1;
+      this.setState({
+        currentIndex: newIndex
+      })
+    }
   }
 
   render() {
