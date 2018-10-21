@@ -26,6 +26,17 @@
 	transition: all 0.6s linear;
 }
 
+.caption {
+	display: inline-block;
+	top: 45%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 45px;
+	color: white;
+	white-space: normal;
+}
+
 // style for the arrows
 .fa {
   color: white;

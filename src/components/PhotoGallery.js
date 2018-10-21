@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Photo from './Photo.js';
+import Caption from './Caption.js';
 import LeftArrow from './arrows/LeftArrow.js';
 import RightArrow from './arrows/RightArrow.js';
 
@@ -78,7 +79,9 @@ class PhotoGallery extends Component {
             onStartHandler={this.onStartHandler}
             onEndHandler={this.onEndHandler}
           />
+          <Caption property={property}/>
         </div>
+
         <LeftArrow leftPhoto={this.leftPhoto} />
         <RightArrow rightPhoto={this.rightPhoto} />
       </div>

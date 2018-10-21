@@ -5,7 +5,7 @@ const data = {
       "caption": "A dog is the only thing on earth that loves you more than you love yourself."
     }, {
       "url": "https://images.pexels.com/photos/460823/pexels-photo-460823.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "caption": "A dog is the only thing on earth that loves you more than you love yourself.",
+      "caption": "I really love the sound of my dog snoring.",
     }, {
       "url": "https://images.pexels.com/photos/8700/wall-animal-dog-pet.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       "caption": "The dog is the perfect portrait subject. He doesn't pose. He isn't aware of the camera.",
