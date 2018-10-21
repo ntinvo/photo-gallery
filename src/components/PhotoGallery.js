@@ -27,6 +27,8 @@ class PhotoGallery extends Component {
     }
   }
 
+  // this function updates the state for currentIndex. If it is at the beginning of the array, then we will move
+  // the index to the end of the array, and then update the state.
   leftPhoto = () => {
     let newIndex = this.state.currentIndex === 0 ? this.state.images.length - 1 : this.state.currentIndex - 1;
     this.setState({
@@ -34,6 +36,8 @@ class PhotoGallery extends Component {
     });
   }
 
+  // this function updates the state for currentIndex. If it is at the end of the array, then we will
+  // move the index to the beginning of the array, and then update the state.
   rightPhoto = () => {
     let newIndex = this.state.currentIndex === this.state.images.length - 1 ? 0 : this.state.currentIndex + 1;
     this.setState({
@@ -41,6 +45,8 @@ class PhotoGallery extends Component {
     });
   }
 
+  // this function handles the case where the users start swiping or holding down the mouse, we then record
+  // the X position and save it to the state. This will be use to handle swiping.
   onStartHandler = (e) => {
     e.preventDefault();
     this.setState({
@@ -48,6 +54,9 @@ class PhotoGallery extends Component {
     });
   }
 
+  // this function will check the end of swipe and mouse up events. It will compare the end position with the
+  // starting position that we got from onStartHandler, it will change the currentIndex based on the starting
+  // and ending position.
   onEndHandler = (e) => {
     e.preventDefault();
     if (Math.abs(this.state.startSwipePositionX - e.pageX) < 50) {
@@ -66,6 +75,7 @@ class PhotoGallery extends Component {
     }
   }
 
+  // renders the PhotoGallery component
   render() {
     let property = {
       image: this.state.images[this.state.currentIndex],

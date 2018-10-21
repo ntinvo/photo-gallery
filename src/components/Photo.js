@@ -13,7 +13,7 @@ const Photo = (props) => {
       onTouchEnd={props.onEndHandler}
     >
     </div>
-  )
+  );
 }
 
 export default Photo;

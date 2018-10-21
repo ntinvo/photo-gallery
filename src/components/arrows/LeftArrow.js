@@ -6,7 +6,7 @@ const LeftArrow = (props) => {
        aria-hidden="true"
        onClick={ props.leftPhoto }>
     </i>
-  )
+  );
 }
 
 export default LeftArrow;

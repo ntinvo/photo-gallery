@@ -6,7 +6,7 @@ const RightArrow = (props) => {
        aria-hidden="true"
        onClick={ props.rightPhoto }>
     </i>
-  )
+  );
 }
 
 export default RightArrow;
