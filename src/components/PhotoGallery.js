@@ -6,7 +6,6 @@ import RightArrow from './arrows/RightArrow.js';
 import './PhotoGallery.scss';
 
 class PhotoGallery extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -46,21 +45,24 @@ class PhotoGallery extends Component {
     e.preventDefault();
     this.setState({
       startSwipePositionX: e.pageX
-    })
+    });
   }
 
   onEndHandler = (e) => {
     e.preventDefault();
+    if (Math.abs(this.state.startSwipePositionX - e.pageX) < 50) {
+      return;
+    }
     if(this.state.startSwipePositionX < e.pageX) {
       let newIndex = this.state.currentIndex === 0 ? this.state.images.length - 1 : this.state.currentIndex - 1;
       this.setState({
         currentIndex: newIndex
-      })
+      });
     } else {
       let newIndex = this.state.currentIndex === this.state.images.length - 1 ? 0 : this.state.currentIndex + 1;
       this.setState({
         currentIndex: newIndex
-      })
+      });
     }
   }
 
