@@ -3,6 +3,8 @@ import Photo from './Photo.js';
 import LeftArrow from './arrows/LeftArrow.js';
 import RightArrow from './arrows/RightArrow.js';
 
+import './PhotoGallery.scss';
+
 class Lessons extends Component {
 
   constructor(props) {
@@ -40,8 +42,10 @@ class Lessons extends Component {
       key: this.state.currentIndex
     }
     return (
-      <div>
-        <Photo property={property} />
+      <div className="photo-gallery">
+        <div className="photo-wrapper">
+          <Photo property={property} />
+        </div>
         <LeftArrow leftPhoto={this.leftPhoto} />
         <RightArrow rightPhoto={this.rightPhoto} />
       </div>
