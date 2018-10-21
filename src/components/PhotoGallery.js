@@ -42,13 +42,27 @@ class Lessons extends Component {
     });
   }
 
+  onStartHandler = (e) => {
+    e.preventDefault();
+    console.log("started");
+  }
+
+  onEndHandler = (e) => {
+    e.preventDefault();
+    console.log("ended");
+  }
+
   render() {
     let property = {
       image: this.state.images[this.state.currentIndex],
       key: this.state.currentIndex
     }
     return (
-      <div className="photo-gallery">
+      <div className="photo-gallery"
+        onMouseDown={this.onStartHandler}
+        onTouchStart={this.onStartHandler}
+        onMouseUp={this.onEndHandler}
+        onTouchEnd={this.onEndHandler}>
         <div className="photo-wrapper">
           <Photo property={property} />
         </div>
