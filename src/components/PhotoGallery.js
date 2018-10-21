@@ -33,7 +33,10 @@ class Lessons extends Component {
   }
 
   rightPhoto = () => {
-    console.log("go right");
+    let newIndex = this.state.currentIndex === this.state.images.length - 1 ? 0 : this.state.currentIndex + 1;
+    this.setState({
+      currentIndex: newIndex
+    });
   }
 
   render() {
