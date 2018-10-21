@@ -4,13 +4,22 @@ import LeftArrow from './arrows/LeftArrow.js';
 import RightArrow from './arrows/RightArrow.js';
 
 class Lessons extends Component {
+
+  leftPhoto = () => {
+    console.log("go left");
+  }
+
+  rightPhoto = () => {
+    console.log("go right");
+  }
+
   render() {
     return (
       <div>
         Photo Gallery
         <Photo />
-        <LeftArrow />
-        <RightArrow />
+        <LeftArrow leftPhoto={this.leftPhoto} />
+        <RightArrow rightPhoto={this.rightPhoto} />
       </div>
     );
   }
