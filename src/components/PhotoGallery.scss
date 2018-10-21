@@ -33,3 +33,18 @@
   width: 40px;
   height: 40px;
 }
+
+.fa-angle-left {
+  left: 20px;
+  transition: left 0.5s;
+  &:hover {
+    left: 15px;
+  }
+}
+.fa-angle-right {
+  right: 20px;
+  transition: right 0.5s;
+  &:hover {
+    right: 15px;
+  }
+}
