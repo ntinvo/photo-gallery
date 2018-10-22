@@ -39,7 +39,6 @@ class PhotoGallery extends Component {
   // this function handles the case where the users start swiping or holding down the mouse, we then record
   // the X position and save it to the state. This will be use to handle swiping.
   onStartHandler = (e) => {
-    e.preventDefault();
     this.setState({
       startSwipePositionX: e.pageX
     });
@@ -49,7 +48,6 @@ class PhotoGallery extends Component {
   // starting position that we got from onStartHandler, it will change the currentIndex based on the starting
   // and ending position.
   onEndHandler = (e) => {
-    e.preventDefault();
     if (Math.abs(this.state.startSwipePositionX - e.pageX) < 50) {
       return;
     }
