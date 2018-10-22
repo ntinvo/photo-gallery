@@ -46,7 +46,7 @@
 	font-size: 45px;
 	color: white;
 	white-space: normal;
-	transition: all 0.6s linear;
+	transition-timing-function: ease-in;
 }
 
 // style for the arrows
@@ -74,4 +74,23 @@
   &:hover {
     right: 15px;
   }
+}
+
+
+.caption-enter {
+  opacity: 0.01;
+}
+
+.caption-enter.caption-enter-active {
+  opacity: 1;
+  transition: opacity 0.6s ease-in;
+}
+
+.caption-leave {
+  opacity: 1;
+}
+
+.caption-leave.caption-leave-active {
+  opacity: 0.01;
+  transition: opacity 0.6ms ease-in;
 }
