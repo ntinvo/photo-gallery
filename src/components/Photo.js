@@ -1,4 +1,5 @@
 import React from 'react';
+import Caption from './Caption.js';
 
 const Photo = (props) => {
   const photo = {
@@ -12,6 +13,7 @@ const Photo = (props) => {
       onMouseUp={props.onEndHandler}
       onTouchEnd={props.onEndHandler}
     >
+      <Caption caption={props.property.image.caption}/>
     </div>
   );
 }

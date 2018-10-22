@@ -2,7 +2,7 @@ import React from 'react';
 
 const Caption = (props) => {
   return (
-    <p className="caption">{ props.property.image.caption }</p>
+    <p className="caption">{ props.caption }</p>
   );
 }
 

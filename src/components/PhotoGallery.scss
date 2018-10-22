@@ -24,17 +24,29 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 	transition: all 0.6s linear;
+	text-align: center;
+	&:before {
+	  content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+		opacity: .6;
+  }
 }
 
 .caption {
 	display: inline-block;
-	top: 45%;
+	top: 40%;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 45px;
 	color: white;
 	white-space: normal;
+	transition: all 0.6s linear;
 }
 
 // style for the arrows
